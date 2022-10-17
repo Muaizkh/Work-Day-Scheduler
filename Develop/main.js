@@ -31,7 +31,15 @@ let backgroundColor = ""
         text = localStorage.getItem(row)
     }
 
-    presentTime.append
+    presentTime.append(`
+    <div>
+    <div class ="col 2 hourOfDay"> ${time}</div>
+    
+    
+    
+    
+    
+    `)
 
     let saveButton = $('.saveButton')
     saveButton.on ('click', function (event){
