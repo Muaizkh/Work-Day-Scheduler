@@ -15,7 +15,7 @@ let backgroundColor = ""
     }else {
         backgroundColor = 'success'
     }
-
+// to change time from AM to PM rather than a 24 hr clock
     if(i<12){
         time += 'AM'
     } else if (i ==12){
@@ -30,7 +30,7 @@ let backgroundColor = ""
     } else {
         text = localStorage.getItem(row)
     }
-
+// added a place to put save button as well as textarea that will be needed to save what you are adding
     presentTime.append(`
     <div>
     <div class ="col 2 hourOfDay"> ${time}</div>
@@ -41,7 +41,7 @@ let backgroundColor = ""
     </div>
     `)
     row += i
-
+// setting up the saveButton and allowing for it to save into a row and allowing the children of that row hold the local storage
     let saveButton = $('.saveButton')
     saveButton.on ('click', function (event){
         event.preventDefault()
@@ -58,9 +58,9 @@ let backgroundColor = ""
             localStorage.setItem(numberClicked, textRow)
         }
     })
-
+// displays the current date
     let date = moment() 
-    $('#dtime').text(today.format ("mm/dd/yy"))
+    $('#dtime').text(today.format ("mm,dd,yy"))
 
     let dTime = $('#dtime')
 }
