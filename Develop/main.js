@@ -34,12 +34,13 @@ let backgroundColor = ""
     presentTime.append(`
     <div>
     <div class ="col 2 hourOfDay"> ${time}</div>
-    
-    
-    
-    
-    
+    <textarea id= "text" class=" bg- ${backgroundcolor}text-black"> ${text}</textarea>
+    <button class = "saveButton justify-content-center d-flex align-items-center" data-row =${row}>
+    <i type ="submit" class = "save"></i>
+    </button>
+    </div>
     `)
+    row += i
 
     let saveButton = $('.saveButton')
     saveButton.on ('click', function (event){
